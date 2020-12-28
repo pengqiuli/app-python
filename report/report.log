@@ -1,0 +1,1276 @@
+2020-12-25 15:10:34,882    4592     INFO test_runner.py(154) - 预计并发线程数：1
+2020-12-25 15:11:06,051    6100     INFO result.py(65) - 开始测试： test_login_001 (case.test_login.test)
+2020-12-25 15:11:23,251    6100     INFO result.py(152) - 测试执行通过： test_login_001 (case.test_login.test)
+2020-12-25 15:11:23,251    6100     INFO result.py(86) - 测试结束： test_login_001 (case.test_login.test)
+2020-12-25 15:11:23,251    6100     INFO result.py(88) - 耗时： 17.200270652770996
+2020-12-25 15:11:23,251    6100     INFO result.py(65) - 开始测试： test_login_002 (case.test_login.test)
+2020-12-25 15:11:39,466    6100     INFO result.py(152) - 测试执行通过： test_login_002 (case.test_login.test)
+2020-12-25 15:11:39,466    6100     INFO result.py(86) - 测试结束： test_login_002 (case.test_login.test)
+2020-12-25 15:11:39,467    6100     INFO result.py(88) - 耗时： 16.215301752090454
+2020-12-25 15:11:39,467    6100     INFO result.py(65) - 开始测试： test_login_008 (case.test_login.test)
+2020-12-25 15:11:57,549    6100     INFO result.py(152) - 测试执行通过： test_login_008 (case.test_login.test)
+2020-12-25 15:11:57,549    6100     INFO result.py(86) - 测试结束： test_login_008 (case.test_login.test)
+2020-12-25 15:11:57,549    6100     INFO result.py(88) - 耗时： 18.08213520050049
+2020-12-25 15:12:02,296    6100    ERROR result.py(171) - 测试产生错误： tearDownClass (case.test_login.test)
+Traceback (most recent call last):
+  File "E:\app-python\case\test_login.py", line 82, in tearDownClass
+    cls.driver.quit()
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 698, in quit
+    self.execute(Command.QUIT)
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 31, in check_response
+    raise wde
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 26, in check_response
+    super().check_response(response)
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: A session is either terminated or not started
+
+
+2020-12-25 15:12:02,296    4592     INFO test_runner.py(191) - 
+Pass	test_login_001 (case.test_login.test)
+Pass	test_login_002 (case.test_login.test)
+Pass	test_login_008 (case.test_login.test)
+
+2020-12-25 15:12:02,296    4592    ERROR test_runner.py(193) - 
+Error	tearDownClass (case.test_login.test)
+
+2020-12-25 15:12:02,297    4592     INFO test_runner.py(211) - 
+测试结束！
+运行时间: 0:01:27.603389
+共计执行用例数量：3
+执行成功用例数量：3
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：0
+
+2020-12-25 15:21:28,621   19248     INFO test_runner.py(154) - 预计并发线程数：1
+2020-12-25 15:22:16,945   11292    ERROR result.py(171) - 测试产生错误： setUpClass (case.test_Feedback.test)
+Traceback (most recent call last):
+  File "E:\app-python\venv\lib\site-packages\urllib3\connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "E:\app-python\venv\lib\site-packages\urllib3\connectionpool.py", line 426, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "E:\app-python\venv\lib\site-packages\urllib3\connectionpool.py", line 421, in _make_request
+    httplib_response = conn.getresponse()
+  File "D:\Python37\lib\http\client.py", line 1321, in getresponse
+    response.begin()
+  File "D:\Python37\lib\http\client.py", line 296, in begin
+    version, status, reason = self._read_status()
+  File "D:\Python37\lib\http\client.py", line 257, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "D:\Python37\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+ConnectionAbortedError: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\app-python\case\test_Feedback.py", line 17, in setUpClass
+    el9 = driver.find_element_by_accessibility_id("服务中心")
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\extensions\search_context\mobile.py", line 47, in find_element_by_accessibility_id
+    return self.find_element(by=MobileBy.ACCESSIBILITY_ID, value=accessibility_id)
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\webdriver.py", line 281, in find_element
+    'value': value})['value']
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 374, in execute
+    return self._request(command_info[0], url, body=data)
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "E:\app-python\venv\lib\site-packages\urllib3\request.py", line 80, in request
+    method, url, fields=fields, headers=headers, **urlopen_kw
+  File "E:\app-python\venv\lib\site-packages\urllib3\request.py", line 171, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "E:\app-python\venv\lib\site-packages\urllib3\poolmanager.py", line 336, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "E:\app-python\venv\lib\site-packages\urllib3\connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "E:\app-python\venv\lib\site-packages\urllib3\util\retry.py", line 410, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "E:\app-python\venv\lib\site-packages\urllib3\packages\six.py", line 734, in reraise
+    raise value.with_traceback(tb)
+  File "E:\app-python\venv\lib\site-packages\urllib3\connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "E:\app-python\venv\lib\site-packages\urllib3\connectionpool.py", line 426, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "E:\app-python\venv\lib\site-packages\urllib3\connectionpool.py", line 421, in _make_request
+    httplib_response = conn.getresponse()
+  File "D:\Python37\lib\http\client.py", line 1321, in getresponse
+    response.begin()
+  File "D:\Python37\lib\http\client.py", line 296, in begin
+    version, status, reason = self._read_status()
+  File "D:\Python37\lib\http\client.py", line 257, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "D:\Python37\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionAbortedError(10053, '你的主机中的软件中止了一个已建立的连接。', None, 10053, None))
+
+2020-12-25 15:22:54,506   11292     INFO result.py(65) - 开始测试： test_login_001 (case.test_login.test)
+2020-12-25 15:23:12,006   11292     INFO result.py(152) - 测试执行通过： test_login_001 (case.test_login.test)
+2020-12-25 15:23:12,006   11292     INFO result.py(86) - 测试结束： test_login_001 (case.test_login.test)
+2020-12-25 15:23:12,006   11292     INFO result.py(88) - 耗时： 17.500073671340942
+2020-12-25 15:23:12,006   11292     INFO result.py(65) - 开始测试： test_login_002 (case.test_login.test)
+2020-12-25 15:23:29,038   11292     INFO result.py(152) - 测试执行通过： test_login_002 (case.test_login.test)
+2020-12-25 15:23:29,038   11292     INFO result.py(86) - 测试结束： test_login_002 (case.test_login.test)
+2020-12-25 15:23:29,038   11292     INFO result.py(88) - 耗时： 17.03213405609131
+2020-12-25 15:23:29,038   11292     INFO result.py(65) - 开始测试： test_login_008 (case.test_login.test)
+2020-12-25 15:23:47,469   11292     INFO result.py(152) - 测试执行通过： test_login_008 (case.test_login.test)
+2020-12-25 15:23:47,470   11292     INFO result.py(86) - 测试结束： test_login_008 (case.test_login.test)
+2020-12-25 15:23:47,470   11292     INFO result.py(88) - 耗时： 18.431153297424316
+2020-12-25 15:24:47,041   11292     INFO result.py(65) - 开始测试： test_nicheng_001 (case.test_nicheng.test)
+2020-12-25 15:24:47,041   11292    ERROR result.py(171) - 测试产生错误： test_nicheng_001 (case.test_nicheng.test)
+Traceback (most recent call last):
+  File "E:\app-python\case\test_nicheng.py", line 36, in test_nicheng_001
+    el = self.driver.find_element_by_xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.widget.EditText")
+AttributeError: 'test' object has no attribute 'driver'
+
+2020-12-25 15:24:47,041   11292     INFO result.py(86) - 测试结束： test_nicheng_001 (case.test_nicheng.test)
+2020-12-25 15:24:47,041   11292     INFO result.py(88) - 耗时： 0.0
+2020-12-25 15:24:47,042   11292     INFO result.py(65) - 开始测试： test_nicheng_002 (case.test_nicheng.test)
+2020-12-25 15:24:47,042   11292    ERROR result.py(171) - 测试产生错误： test_nicheng_002 (case.test_nicheng.test)
+Traceback (most recent call last):
+  File "E:\app-python\case\test_nicheng.py", line 43, in test_nicheng_002
+    element = self.el.send_keys("我")
+AttributeError: 'test' object has no attribute 'el'
+
+2020-12-25 15:24:47,042   11292     INFO result.py(86) - 测试结束： test_nicheng_002 (case.test_nicheng.test)
+2020-12-25 15:24:47,042   11292     INFO result.py(88) - 耗时： 0.0
+2020-12-25 15:24:47,042   11292     INFO result.py(65) - 开始测试： test_nicheng_003 (case.test_nicheng.test)
+2020-12-25 15:24:47,042   11292    ERROR result.py(171) - 测试产生错误： test_nicheng_003 (case.test_nicheng.test)
+Traceback (most recent call last):
+  File "E:\app-python\case\test_nicheng.py", line 50, in test_nicheng_003
+    el4 = clean_nicheng(self.driver)
+AttributeError: 'test' object has no attribute 'driver'
+
+2020-12-25 15:24:47,042   11292     INFO result.py(86) - 测试结束： test_nicheng_003 (case.test_nicheng.test)
+2020-12-25 15:24:47,042   11292     INFO result.py(88) - 耗时： 0.0
+2020-12-25 15:24:47,042   11292     INFO result.py(65) - 开始测试： test_nicheng_004 (case.test_nicheng.test)
+2020-12-25 15:24:47,042   11292    ERROR result.py(171) - 测试产生错误： test_nicheng_004 (case.test_nicheng.test)
+Traceback (most recent call last):
+  File "E:\app-python\case\test_nicheng.py", line 58, in test_nicheng_004
+    el4 = clean_nicheng(self.driver)
+AttributeError: 'test' object has no attribute 'driver'
+
+2020-12-25 15:24:47,042   11292     INFO result.py(86) - 测试结束： test_nicheng_004 (case.test_nicheng.test)
+2020-12-25 15:24:47,042   11292     INFO result.py(88) - 耗时： 0.0
+2020-12-25 15:24:47,042   19248     INFO test_runner.py(191) - 
+Pass	test_login_001 (case.test_login.test)
+Pass	test_login_002 (case.test_login.test)
+Pass	test_login_008 (case.test_login.test)
+
+2020-12-25 15:24:47,042   19248    ERROR test_runner.py(193) - 
+Error	setUpClass (case.test_Feedback.test)
+Error	test_nicheng_001 (case.test_nicheng.test)
+Error	test_nicheng_002 (case.test_nicheng.test)
+Error	test_nicheng_003 (case.test_nicheng.test)
+Error	test_nicheng_004 (case.test_nicheng.test)
+
+2020-12-25 15:24:47,044   19248     INFO test_runner.py(211) - 
+测试结束！
+运行时间: 0:03:18.554476
+共计执行用例数量：7
+执行成功用例数量：3
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：4
+
+2020-12-25 15:35:39,140    8156     INFO test_runner.py(154) - 预计并发线程数：1
+2020-12-25 15:36:36,788   18520     INFO result.py(65) - 开始测试： test_feedback_001 (case.test_Feedback.test)
+2020-12-25 15:36:37,194   18520    ERROR result.py(171) - 测试产生错误： test_feedback_001 (case.test_Feedback.test)
+Traceback (most recent call last):
+  File "E:\app-python\case\test_Feedback.py", line 21, in test_feedback_001
+    feedback1 = feedback(self.driver,"","phone","15002076811","dhng")
+  File "E:\app-python\base\activity.py", line 170, in feedback
+    "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.widget.EditText[1]")
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\webdriver.py", line 281, in find_element
+    'value': value})['value']
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 31, in check_response
+    raise wde
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 26, in check_response
+    super().check_response(response)
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: An element could not be located on the page using the given search parameters.
+
+
+2020-12-25 15:36:37,194   18520     INFO result.py(86) - 测试结束： test_feedback_001 (case.test_Feedback.test)
+2020-12-25 15:36:37,195   18520     INFO result.py(88) - 耗时： 0.40503740310668945
+2020-12-25 15:36:41,573   18520    ERROR result.py(171) - 测试产生错误： tearDownClass (case.test_Feedback.test)
+Traceback (most recent call last):
+  File "E:\app-python\case\test_Feedback.py", line 27, in tearDownClass
+    cls.driver.quit()
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 698, in quit
+    self.execute(Command.QUIT)
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 31, in check_response
+    raise wde
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 26, in check_response
+    super().check_response(response)
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: A session is either terminated or not started
+
+
+2020-12-25 15:36:41,580   18520    ERROR result.py(171) - 测试产生错误： tearDownClass (case.test_Feedback.test)
+Traceback (most recent call last):
+  File "E:\app-python\case\test_Feedback.py", line 27, in tearDownClass
+    cls.driver.quit()
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 698, in quit
+    self.execute(Command.QUIT)
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 31, in check_response
+    raise wde
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 26, in check_response
+    super().check_response(response)
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: A session is either terminated or not started
+
+
+2020-12-25 15:36:41,580    8156    ERROR test_runner.py(193) - 
+Error	test_feedback_001 (case.test_Feedback.test)
+Error	tearDownClass (case.test_Feedback.test)
+Error	tearDownClass (case.test_Feedback.test)
+
+2020-12-25 15:36:41,582    8156     INFO test_runner.py(211) - 
+测试结束！
+运行时间: 0:01:02.592941
+共计执行用例数量：1
+执行成功用例数量：0
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：1
+
+2020-12-25 15:38:11,441   13736     INFO test_runner.py(154) - 预计并发线程数：1
+2020-12-25 15:39:01,561   10068     INFO result.py(65) - 开始测试： test_feedback_001 (case.test_Feedback.test)
+2020-12-25 15:39:27,072   10068     INFO result.py(152) - 测试执行通过： test_feedback_001 (case.test_Feedback.test)
+2020-12-25 15:39:27,072   10068     INFO result.py(86) - 测试结束： test_feedback_001 (case.test_Feedback.test)
+2020-12-25 15:39:27,072   10068     INFO result.py(88) - 耗时： 25.511597394943237
+2020-12-25 15:39:31,785   10068    ERROR result.py(171) - 测试产生错误： tearDownClass (case.test_Feedback.test)
+Traceback (most recent call last):
+  File "E:\app-python\case\test_Feedback.py", line 28, in tearDownClass
+    cls.driver.quit()
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 698, in quit
+    self.execute(Command.QUIT)
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 31, in check_response
+    raise wde
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 26, in check_response
+    super().check_response(response)
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: A session is either terminated or not started
+
+
+2020-12-25 15:39:31,795   10068    ERROR result.py(171) - 测试产生错误： tearDownClass (case.test_Feedback.test)
+Traceback (most recent call last):
+  File "E:\app-python\case\test_Feedback.py", line 28, in tearDownClass
+    cls.driver.quit()
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 698, in quit
+    self.execute(Command.QUIT)
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 31, in check_response
+    raise wde
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 26, in check_response
+    super().check_response(response)
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: A session is either terminated or not started
+
+
+2020-12-25 15:39:31,796   13736     INFO test_runner.py(191) - 
+Pass	test_feedback_001 (case.test_Feedback.test)
+
+2020-12-25 15:39:31,796   13736    ERROR test_runner.py(193) - 
+Error	tearDownClass (case.test_Feedback.test)
+Error	tearDownClass (case.test_Feedback.test)
+
+2020-12-25 15:39:31,796   13736     INFO test_runner.py(211) - 
+测试结束！
+运行时间: 0:01:20.486906
+共计执行用例数量：1
+执行成功用例数量：1
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：0
+
+2020-12-25 15:39:55,033   10768     INFO test_runner.py(154) - 预计并发线程数：1
+2020-12-25 15:40:44,227    2844     INFO result.py(65) - 开始测试： test_feedback_001 (case.test_Feedback.test)
+2020-12-25 15:41:10,083    2844     INFO result.py(152) - 测试执行通过： test_feedback_001 (case.test_Feedback.test)
+2020-12-25 15:41:10,083    2844     INFO result.py(86) - 测试结束： test_feedback_001 (case.test_Feedback.test)
+2020-12-25 15:41:10,083    2844     INFO result.py(88) - 耗时： 25.855138063430786
+2020-12-25 15:41:14,967    2844    ERROR result.py(171) - 测试产生错误： tearDownClass (case.test_Feedback.test)
+Traceback (most recent call last):
+  File "E:\app-python\case\test_Feedback.py", line 28, in tearDownClass
+    cls.driver.quit()
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 698, in quit
+    self.execute(Command.QUIT)
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 31, in check_response
+    raise wde
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 26, in check_response
+    super().check_response(response)
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: A session is either terminated or not started
+
+
+2020-12-25 15:41:14,973    2844    ERROR result.py(171) - 测试产生错误： tearDownClass (case.test_Feedback.test)
+Traceback (most recent call last):
+  File "E:\app-python\case\test_Feedback.py", line 28, in tearDownClass
+    cls.driver.quit()
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 698, in quit
+    self.execute(Command.QUIT)
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 31, in check_response
+    raise wde
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 26, in check_response
+    super().check_response(response)
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: A session is either terminated or not started
+
+
+2020-12-25 15:41:14,973   10768     INFO test_runner.py(191) - 
+Pass	test_feedback_001 (case.test_Feedback.test)
+
+2020-12-25 15:41:14,973   10768    ERROR test_runner.py(193) - 
+Error	tearDownClass (case.test_Feedback.test)
+Error	tearDownClass (case.test_Feedback.test)
+
+2020-12-25 15:41:14,975   10768     INFO test_runner.py(211) - 
+测试结束！
+运行时间: 0:01:20.079974
+共计执行用例数量：1
+执行成功用例数量：1
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：0
+
+2020-12-25 15:42:23,471   19404     INFO test_runner.py(154) - 预计并发线程数：1
+2020-12-25 15:43:15,259   19136     INFO result.py(65) - 开始测试： test_feedback_001 (case.test_Feedback.test)
+2020-12-25 15:43:15,476   19136    ERROR result.py(171) - 测试产生错误： test_feedback_001 (case.test_Feedback.test)
+Traceback (most recent call last):
+  File "E:\app-python\case\test_Feedback.py", line 22, in test_feedback_001
+    feedback1 = feedback(self.driver,"","phone","15002076811","dhng")
+  File "E:\app-python\base\activity.py", line 170, in feedback
+    "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.widget.EditText[1]")
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\webdriver.py", line 281, in find_element
+    'value': value})['value']
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 31, in check_response
+    raise wde
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 26, in check_response
+    super().check_response(response)
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: An element could not be located on the page using the given search parameters.
+
+
+2020-12-25 15:43:15,476   19136     INFO result.py(86) - 测试结束： test_feedback_001 (case.test_Feedback.test)
+2020-12-25 15:43:15,476   19136     INFO result.py(88) - 耗时： 0.2166752815246582
+2020-12-25 15:43:15,476   19136     INFO result.py(65) - 开始测试： test_feedback_002 (case.test_Feedback.test)
+2020-12-25 15:43:40,845   19136     INFO result.py(152) - 测试执行通过： test_feedback_002 (case.test_Feedback.test)
+2020-12-25 15:43:40,845   19136     INFO result.py(86) - 测试结束： test_feedback_002 (case.test_Feedback.test)
+2020-12-25 15:43:40,846   19136     INFO result.py(88) - 耗时： 25.369011878967285
+2020-12-25 15:43:46,519   19136    ERROR result.py(171) - 测试产生错误： tearDownClass (case.test_Feedback.test)
+Traceback (most recent call last):
+  File "E:\app-python\case\test_Feedback.py", line 34, in tearDownClass
+    cls.driver.quit()
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 698, in quit
+    self.execute(Command.QUIT)
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 31, in check_response
+    raise wde
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 26, in check_response
+    super().check_response(response)
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: A session is either terminated or not started
+
+
+2020-12-25 15:43:46,527   19136    ERROR result.py(171) - 测试产生错误： tearDownClass (case.test_Feedback.test)
+Traceback (most recent call last):
+  File "E:\app-python\case\test_Feedback.py", line 34, in tearDownClass
+    cls.driver.quit()
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 698, in quit
+    self.execute(Command.QUIT)
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 31, in check_response
+    raise wde
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 26, in check_response
+    super().check_response(response)
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: A session is either terminated or not started
+
+
+2020-12-25 15:43:46,528   19404     INFO test_runner.py(191) - 
+Pass	test_feedback_002 (case.test_Feedback.test)
+
+2020-12-25 15:43:46,528   19404    ERROR test_runner.py(193) - 
+Error	test_feedback_001 (case.test_Feedback.test)
+Error	tearDownClass (case.test_Feedback.test)
+Error	tearDownClass (case.test_Feedback.test)
+
+2020-12-25 15:43:46,529   19404     INFO test_runner.py(211) - 
+测试结束！
+运行时间: 0:01:23.196433
+共计执行用例数量：2
+执行成功用例数量：1
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：1
+
+2020-12-25 15:45:06,912   19092     INFO test_runner.py(154) - 预计并发线程数：1
+2020-12-25 15:45:06,915   13048     INFO result.py(65) - 开始测试： case.test_Feedback (unittest.loader._FailedTest)
+2020-12-25 15:45:06,915   13048    ERROR result.py(171) - 测试产生错误： case.test_Feedback (unittest.loader._FailedTest)
+ImportError: Failed to import test module: case.test_Feedback
+Traceback (most recent call last):
+  File "D:\Python37\lib\unittest\loader.py", line 434, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "D:\Python37\lib\unittest\loader.py", line 375, in _get_module_from_name
+    __import__(name)
+  File "E:\app-python\case\test_Feedback.py", line 35
+    @classmethod
+    ^
+IndentationError: expected an indented block
+
+
+2020-12-25 15:45:06,916   13048     INFO result.py(86) - 测试结束： case.test_Feedback (unittest.loader._FailedTest)
+2020-12-25 15:45:06,916   13048     INFO result.py(88) - 耗时： 0.0009756088256835938
+2020-12-25 15:45:38,835   13048     INFO result.py(65) - 开始测试： test_login_001 (case.test_login.test)
+2020-12-25 15:45:56,247   13048     INFO result.py(152) - 测试执行通过： test_login_001 (case.test_login.test)
+2020-12-25 15:45:56,247   13048     INFO result.py(86) - 测试结束： test_login_001 (case.test_login.test)
+2020-12-25 15:45:56,247   13048     INFO result.py(88) - 耗时： 17.411424160003662
+2020-12-25 15:45:56,247   13048     INFO result.py(65) - 开始测试： test_login_002 (case.test_login.test)
+2020-12-25 15:46:12,681   13048     INFO result.py(152) - 测试执行通过： test_login_002 (case.test_login.test)
+2020-12-25 15:46:12,681   13048     INFO result.py(86) - 测试结束： test_login_002 (case.test_login.test)
+2020-12-25 15:46:12,681   13048     INFO result.py(88) - 耗时： 16.434306383132935
+2020-12-25 15:46:12,681   13048     INFO result.py(65) - 开始测试： test_login_008 (case.test_login.test)
+2020-12-25 15:46:30,974   13048     INFO result.py(152) - 测试执行通过： test_login_008 (case.test_login.test)
+2020-12-25 15:46:30,974   13048     INFO result.py(86) - 测试结束： test_login_008 (case.test_login.test)
+2020-12-25 15:46:30,974   13048     INFO result.py(88) - 耗时： 18.292927503585815
+2020-12-25 15:46:36,344   13048    ERROR result.py(171) - 测试产生错误： tearDownClass (case.test_login.test)
+Traceback (most recent call last):
+  File "E:\app-python\case\test_login.py", line 82, in tearDownClass
+    cls.driver.quit()
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 698, in quit
+    self.execute(Command.QUIT)
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 31, in check_response
+    raise wde
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 26, in check_response
+    super().check_response(response)
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: A session is either terminated or not started
+
+
+2020-12-25 15:46:36,345   19092     INFO test_runner.py(191) - 
+Pass	test_login_001 (case.test_login.test)
+Pass	test_login_002 (case.test_login.test)
+Pass	test_login_008 (case.test_login.test)
+
+2020-12-25 15:46:36,345   19092    ERROR test_runner.py(193) - 
+Error	case.test_Feedback (unittest.loader._FailedTest)
+Error	tearDownClass (case.test_login.test)
+
+2020-12-25 15:46:36,346   19092     INFO test_runner.py(211) - 
+测试结束！
+运行时间: 0:01:29.566731
+共计执行用例数量：4
+执行成功用例数量：3
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：1
+
+2020-12-25 15:47:09,955   17708     INFO test_runner.py(154) - 预计并发线程数：1
+2020-12-25 15:47:59,866   15504     INFO result.py(65) - 开始测试： test_feedback_001 (case.test_Feedback.test)
+2020-12-25 15:48:24,812   15504     INFO result.py(152) - 测试执行通过： test_feedback_001 (case.test_Feedback.test)
+2020-12-25 15:48:24,813   15504     INFO result.py(86) - 测试结束： test_feedback_001 (case.test_Feedback.test)
+2020-12-25 15:48:24,813   15504     INFO result.py(88) - 耗时： 24.94475030899048
+2020-12-25 15:48:24,813   15504     INFO result.py(65) - 开始测试： test_feedback_002 (case.test_Feedback.test)
+2020-12-25 15:48:56,082   15504     INFO result.py(152) - 测试执行通过： test_feedback_002 (case.test_Feedback.test)
+2020-12-25 15:48:56,082   15504     INFO result.py(86) - 测试结束： test_feedback_002 (case.test_Feedback.test)
+2020-12-25 15:48:56,082   15504     INFO result.py(88) - 耗时： 31.269524335861206
+2020-12-25 15:48:56,082   15504     INFO result.py(65) - 开始测试： test_feedback_003 (case.test_Feedback.test)
+2020-12-25 15:49:30,914   15504     INFO result.py(152) - 测试执行通过： test_feedback_003 (case.test_Feedback.test)
+2020-12-25 15:49:30,914   15504     INFO result.py(86) - 测试结束： test_feedback_003 (case.test_Feedback.test)
+2020-12-25 15:49:30,914   15504     INFO result.py(88) - 耗时： 34.83216214179993
+2020-12-25 15:49:35,532   15504    ERROR result.py(171) - 测试产生错误： tearDownClass (case.test_Feedback.test)
+Traceback (most recent call last):
+  File "E:\app-python\case\test_Feedback.py", line 41, in tearDownClass
+    cls.driver.quit()
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 698, in quit
+    self.execute(Command.QUIT)
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 31, in check_response
+    raise wde
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 26, in check_response
+    super().check_response(response)
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: A session is either terminated or not started
+
+
+2020-12-25 15:49:35,540   15504    ERROR result.py(171) - 测试产生错误： tearDownClass (case.test_Feedback.test)
+Traceback (most recent call last):
+  File "E:\app-python\case\test_Feedback.py", line 41, in tearDownClass
+    cls.driver.quit()
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 698, in quit
+    self.execute(Command.QUIT)
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 31, in check_response
+    raise wde
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 26, in check_response
+    super().check_response(response)
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: A session is either terminated or not started
+
+
+2020-12-25 15:49:35,540   17708     INFO test_runner.py(191) - 
+Pass	test_feedback_001 (case.test_Feedback.test)
+Pass	test_feedback_002 (case.test_Feedback.test)
+Pass	test_feedback_003 (case.test_Feedback.test)
+
+2020-12-25 15:49:35,540   17708    ERROR test_runner.py(193) - 
+Error	tearDownClass (case.test_Feedback.test)
+Error	tearDownClass (case.test_Feedback.test)
+
+2020-12-25 15:49:35,542   17708     INFO test_runner.py(211) - 
+测试结束！
+运行时间: 0:02:25.721099
+共计执行用例数量：3
+执行成功用例数量：3
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：0
+
+2020-12-25 15:54:04,454    2260     INFO test_runner.py(154) - 预计并发线程数：1
+2020-12-25 15:54:34,437    7176     INFO result.py(65) - 开始测试： test_login_001 (case.test_login.test)
+2020-12-25 15:54:51,710    7176     INFO result.py(152) - 测试执行通过： test_login_001 (case.test_login.test)
+2020-12-25 15:54:51,710    7176     INFO result.py(86) - 测试结束： test_login_001 (case.test_login.test)
+2020-12-25 15:54:51,710    7176     INFO result.py(88) - 耗时： 17.273510694503784
+2020-12-25 15:54:51,710    7176     INFO result.py(65) - 开始测试： test_login_002 (case.test_login.test)
+2020-12-25 15:55:08,107    7176     INFO result.py(152) - 测试执行通过： test_login_002 (case.test_login.test)
+2020-12-25 15:55:08,107    7176     INFO result.py(86) - 测试结束： test_login_002 (case.test_login.test)
+2020-12-25 15:55:08,107    7176     INFO result.py(88) - 耗时： 16.39621067047119
+2020-12-25 15:55:08,107    7176     INFO result.py(65) - 开始测试： test_login_008 (case.test_login.test)
+2020-12-25 15:55:25,160    7176     INFO result.py(152) - 测试执行通过： test_login_008 (case.test_login.test)
+2020-12-25 15:55:25,160    7176     INFO result.py(86) - 测试结束： test_login_008 (case.test_login.test)
+2020-12-25 15:55:25,160    7176     INFO result.py(88) - 耗时： 17.052878618240356
+2020-12-25 15:55:29,193    7176    ERROR result.py(171) - 测试产生错误： tearDownClass (case.test_login.test)
+Traceback (most recent call last):
+  File "E:\app-python\case\test_login.py", line 82, in tearDownClass
+    cls.driver.quit()
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 698, in quit
+    self.execute(Command.QUIT)
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 31, in check_response
+    raise wde
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 26, in check_response
+    super().check_response(response)
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: A session is either terminated or not started
+
+
+2020-12-25 15:55:29,193    2260     INFO test_runner.py(191) - 
+Pass	test_login_001 (case.test_login.test)
+Pass	test_login_002 (case.test_login.test)
+Pass	test_login_008 (case.test_login.test)
+
+2020-12-25 15:55:29,193    2260    ERROR test_runner.py(193) - 
+Error	tearDownClass (case.test_login.test)
+
+2020-12-25 15:55:29,195    2260     INFO test_runner.py(211) - 
+测试结束！
+运行时间: 0:01:24.872728
+共计执行用例数量：3
+执行成功用例数量：3
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：0
+
+2020-12-25 15:57:52,272     712     INFO test_runner.py(154) - 预计并发线程数：1
+2020-12-25 15:58:24,279   17948     INFO result.py(65) - 开始测试： test_login_001 (case.test_login.test)
+2020-12-25 15:58:41,410   17948     INFO result.py(152) - 测试执行通过： test_login_001 (case.test_login.test)
+2020-12-25 15:58:41,410   17948     INFO result.py(86) - 测试结束： test_login_001 (case.test_login.test)
+2020-12-25 15:58:41,410   17948     INFO result.py(88) - 耗时： 17.13058066368103
+2020-12-25 15:58:41,410   17948     INFO result.py(65) - 开始测试： test_login_002 (case.test_login.test)
+2020-12-25 15:58:58,178   17948     INFO result.py(152) - 测试执行通过： test_login_002 (case.test_login.test)
+2020-12-25 15:58:58,178   17948     INFO result.py(86) - 测试结束： test_login_002 (case.test_login.test)
+2020-12-25 15:58:58,178   17948     INFO result.py(88) - 耗时： 16.76861071586609
+2020-12-25 15:58:58,178   17948     INFO result.py(65) - 开始测试： test_login_008 (case.test_login.test)
+2020-12-25 15:59:15,897   17948     INFO result.py(152) - 测试执行通过： test_login_008 (case.test_login.test)
+2020-12-25 15:59:15,897   17948     INFO result.py(86) - 测试结束： test_login_008 (case.test_login.test)
+2020-12-25 15:59:15,898   17948     INFO result.py(88) - 耗时： 17.718672275543213
+2020-12-25 15:59:20,402   17948    ERROR result.py(171) - 测试产生错误： tearDownClass (case.test_login.test)
+Traceback (most recent call last):
+  File "E:\app-python\case\test_login.py", line 24, in tearDownClass
+    cls.driver.quit()
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 698, in quit
+    self.execute(Command.QUIT)
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 31, in check_response
+    raise wde
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 26, in check_response
+    super().check_response(response)
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: A session is either terminated or not started
+
+
+2020-12-25 15:59:20,403     712     INFO test_runner.py(191) - 
+Pass	test_login_001 (case.test_login.test)
+Pass	test_login_002 (case.test_login.test)
+Pass	test_login_008 (case.test_login.test)
+
+2020-12-25 15:59:20,403     712    ERROR test_runner.py(193) - 
+Error	tearDownClass (case.test_login.test)
+
+2020-12-25 15:59:20,404     712     INFO test_runner.py(211) - 
+测试结束！
+运行时间: 0:01:28.266076
+共计执行用例数量：3
+执行成功用例数量：3
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：0
+
+2020-12-25 16:00:31,836    2964     INFO test_runner.py(154) - 预计并发线程数：1
+2020-12-25 16:01:06,277    3372     INFO result.py(65) - 开始测试： test_login_001 (case.test_login.test)
+2020-12-25 16:01:22,929    3372     INFO result.py(152) - 测试执行通过： test_login_001 (case.test_login.test)
+2020-12-25 16:01:22,929    3372     INFO result.py(86) - 测试结束： test_login_001 (case.test_login.test)
+2020-12-25 16:01:22,929    3372     INFO result.py(88) - 耗时： 16.65202260017395
+2020-12-25 16:01:22,929    3372     INFO result.py(65) - 开始测试： test_login_002 (case.test_login.test)
+2020-12-25 16:01:39,411    3372     INFO result.py(152) - 测试执行通过： test_login_002 (case.test_login.test)
+2020-12-25 16:01:39,411    3372     INFO result.py(86) - 测试结束： test_login_002 (case.test_login.test)
+2020-12-25 16:01:39,411    3372     INFO result.py(88) - 耗时： 16.48242735862732
+2020-12-25 16:01:39,411    3372     INFO result.py(65) - 开始测试： test_login_008 (case.test_login.test)
+2020-12-25 16:01:57,508    3372     INFO result.py(152) - 测试执行通过： test_login_008 (case.test_login.test)
+2020-12-25 16:01:57,508    3372     INFO result.py(86) - 测试结束： test_login_008 (case.test_login.test)
+2020-12-25 16:01:57,508    3372     INFO result.py(88) - 耗时： 18.096876621246338
+2020-12-25 16:02:01,867    3372    ERROR result.py(171) - 测试产生错误： tearDownClass (case.test_login.test)
+Traceback (most recent call last):
+  File "E:\app-python\case\test_login.py", line 25, in tearDownClass
+    cls.driver.quit()
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 698, in quit
+    self.execute(Command.QUIT)
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 31, in check_response
+    raise wde
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 26, in check_response
+    super().check_response(response)
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: A session is either terminated or not started
+
+
+2020-12-25 16:02:01,868    2964     INFO test_runner.py(191) - 
+Pass	test_login_001 (case.test_login.test)
+Pass	test_login_002 (case.test_login.test)
+Pass	test_login_008 (case.test_login.test)
+
+2020-12-25 16:02:01,868    2964    ERROR test_runner.py(193) - 
+Error	tearDownClass (case.test_login.test)
+
+2020-12-25 16:02:01,869    2964     INFO test_runner.py(211) - 
+测试结束！
+运行时间: 0:01:30.171822
+共计执行用例数量：3
+执行成功用例数量：3
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：0
+
+2020-12-25 16:08:21,301   12284     INFO test_runner.py(154) - 预计并发线程数：1
+2020-12-25 16:08:55,709    6928     INFO result.py(65) - 开始测试： test_login_001 (case.test_login.test)
+2020-12-25 16:09:14,113    6928     INFO result.py(152) - 测试执行通过： test_login_001 (case.test_login.test)
+2020-12-25 16:09:14,114    6928     INFO result.py(86) - 测试结束： test_login_001 (case.test_login.test)
+2020-12-25 16:09:14,114    6928     INFO result.py(88) - 耗时： 18.405213832855225
+2020-12-25 16:09:14,114    6928     INFO result.py(65) - 开始测试： test_login_002 (case.test_login.test)
+2020-12-25 16:09:31,714    6928     INFO result.py(152) - 测试执行通过： test_login_002 (case.test_login.test)
+2020-12-25 16:09:31,714    6928     INFO result.py(86) - 测试结束： test_login_002 (case.test_login.test)
+2020-12-25 16:09:31,714    6928     INFO result.py(88) - 耗时： 17.600297212600708
+2020-12-25 16:09:31,714    6928     INFO result.py(65) - 开始测试： test_login_008 (case.test_login.test)
+2020-12-25 16:09:49,095    6928  WARNING connectionpool.py(752) - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ProtocolError('Connection aborted.', ConnectionAbortedError(10053, '你的主机中的软件中止了一个已建立的连接。', None, 10053, None))': /wd/hub/session/e5cb4fa7-d9aa-4ed0-b7d9-67fc7fcf1bfe/screenshot
+2020-12-25 16:09:50,163    6928     INFO result.py(152) - 测试执行通过： test_login_008 (case.test_login.test)
+2020-12-25 16:09:50,163    6928     INFO result.py(86) - 测试结束： test_login_008 (case.test_login.test)
+2020-12-25 16:09:50,163    6928     INFO result.py(88) - 耗时： 18.448527574539185
+2020-12-25 16:09:50,163    6928    ERROR result.py(171) - 测试产生错误： tearDownClass (case.test_login.test)
+Traceback (most recent call last):
+  File "E:\app-python\case\test_login.py", line 25, in tearDownClass
+    cls.quit()
+AttributeError: type object 'test' has no attribute 'quit'
+
+2020-12-25 16:09:50,164    6928    ERROR result.py(171) - 测试产生错误： tearDownClass (case.test_login.test)
+Traceback (most recent call last):
+  File "E:\app-python\case\test_login.py", line 25, in tearDownClass
+    cls.quit()
+AttributeError: type object 'test' has no attribute 'quit'
+
+2020-12-25 16:09:50,164   12284     INFO test_runner.py(191) - 
+Pass	test_login_001 (case.test_login.test)
+Pass	test_login_002 (case.test_login.test)
+Pass	test_login_008 (case.test_login.test)
+
+2020-12-25 16:09:50,164   12284    ERROR test_runner.py(193) - 
+Error	tearDownClass (case.test_login.test)
+Error	tearDownClass (case.test_login.test)
+
+2020-12-25 16:09:50,165   12284     INFO test_runner.py(211) - 
+测试结束！
+运行时间: 0:01:28.996482
+共计执行用例数量：3
+执行成功用例数量：3
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：0
+
+2020-12-25 16:11:30,341    9324     INFO test_runner.py(154) - 预计并发线程数：1
+2020-12-25 16:12:03,417   15944     INFO result.py(65) - 开始测试： test_login_001 (case.test_login.test)
+2020-12-25 16:12:19,527   15944     INFO result.py(152) - 测试执行通过： test_login_001 (case.test_login.test)
+2020-12-25 16:12:19,527   15944     INFO result.py(86) - 测试结束： test_login_001 (case.test_login.test)
+2020-12-25 16:12:19,527   15944     INFO result.py(88) - 耗时： 16.11005973815918
+2020-12-25 16:12:19,527   15944     INFO result.py(65) - 开始测试： test_login_002 (case.test_login.test)
+2020-12-25 16:12:37,011   15944     INFO result.py(152) - 测试执行通过： test_login_002 (case.test_login.test)
+2020-12-25 16:12:37,011   15944     INFO result.py(86) - 测试结束： test_login_002 (case.test_login.test)
+2020-12-25 16:12:37,011   15944     INFO result.py(88) - 耗时： 17.48367190361023
+2020-12-25 16:12:37,011   15944     INFO result.py(65) - 开始测试： test_login_008 (case.test_login.test)
+2020-12-25 16:12:54,890   15944     INFO result.py(152) - 测试执行通过： test_login_008 (case.test_login.test)
+2020-12-25 16:12:54,890   15944     INFO result.py(86) - 测试结束： test_login_008 (case.test_login.test)
+2020-12-25 16:12:54,890   15944     INFO result.py(88) - 耗时： 17.879185914993286
+2020-12-25 16:13:00,487   15944    ERROR result.py(171) - 测试产生错误： tearDownClass (case.test_login.test)
+Traceback (most recent call last):
+  File "E:\app-python\case\test_login.py", line 27, in tearDownClass
+    cls.driver.quit()
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 698, in quit
+    self.execute(Command.QUIT)
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 31, in check_response
+    raise wde
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 26, in check_response
+    super().check_response(response)
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: A session is either terminated or not started
+
+
+2020-12-25 16:13:00,487    9324     INFO test_runner.py(191) - 
+Pass	test_login_001 (case.test_login.test)
+Pass	test_login_002 (case.test_login.test)
+Pass	test_login_008 (case.test_login.test)
+
+2020-12-25 16:13:00,487    9324    ERROR test_runner.py(193) - 
+Error	tearDownClass (case.test_login.test)
+
+2020-12-25 16:13:00,488    9324     INFO test_runner.py(211) - 
+测试结束！
+运行时间: 0:01:30.281382
+共计执行用例数量：3
+执行成功用例数量：3
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：0
+
+2020-12-25 16:14:02,334   12360     INFO test_runner.py(154) - 预计并发线程数：1
+2020-12-25 16:14:32,490   18456     INFO result.py(65) - 开始测试： test_login_001 (case.test_login.test)
+2020-12-25 16:14:49,406   18456     INFO result.py(152) - 测试执行通过： test_login_001 (case.test_login.test)
+2020-12-25 16:14:49,407   18456     INFO result.py(86) - 测试结束： test_login_001 (case.test_login.test)
+2020-12-25 16:14:49,407   18456     INFO result.py(88) - 耗时： 16.916443824768066
+2020-12-25 16:14:49,408   18456     INFO result.py(65) - 开始测试： test_login_002 (case.test_login.test)
+2020-12-25 16:15:06,852   18456     INFO result.py(152) - 测试执行通过： test_login_002 (case.test_login.test)
+2020-12-25 16:15:06,852   18456     INFO result.py(86) - 测试结束： test_login_002 (case.test_login.test)
+2020-12-25 16:15:06,852   18456     INFO result.py(88) - 耗时： 17.44480037689209
+2020-12-25 16:15:06,852   18456     INFO result.py(65) - 开始测试： test_login_008 (case.test_login.test)
+2020-12-25 16:15:24,831   18456     INFO result.py(152) - 测试执行通过： test_login_008 (case.test_login.test)
+2020-12-25 16:15:24,831   18456     INFO result.py(86) - 测试结束： test_login_008 (case.test_login.test)
+2020-12-25 16:15:24,832   18456     INFO result.py(88) - 耗时： 17.978307962417603
+2020-12-25 16:15:24,832   18456    ERROR result.py(171) - 测试产生错误： tearDownClass (case.test_login.test)
+Traceback (most recent call last):
+  File "E:\app-python\case\test_login.py", line 27, in tearDownClass
+    cls.driver.quit(cls.driver.QUIT)
+AttributeError: 'WebDriver' object has no attribute 'QUIT'
+
+2020-12-25 16:15:24,832   18456    ERROR result.py(171) - 测试产生错误： tearDownClass (case.test_login.test)
+Traceback (most recent call last):
+  File "E:\app-python\case\test_login.py", line 27, in tearDownClass
+    cls.driver.quit(cls.driver.QUIT)
+AttributeError: 'WebDriver' object has no attribute 'QUIT'
+
+2020-12-25 16:15:24,833   12360     INFO test_runner.py(191) - 
+Pass	test_login_001 (case.test_login.test)
+Pass	test_login_002 (case.test_login.test)
+Pass	test_login_008 (case.test_login.test)
+
+2020-12-25 16:15:24,833   12360    ERROR test_runner.py(193) - 
+Error	tearDownClass (case.test_login.test)
+Error	tearDownClass (case.test_login.test)
+
+2020-12-25 16:15:24,834   12360     INFO test_runner.py(211) - 
+测试结束！
+运行时间: 0:01:22.637765
+共计执行用例数量：3
+执行成功用例数量：3
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：0
+
+2020-12-25 16:16:01,092    2244     INFO test_runner.py(154) - 预计并发线程数：1
+2020-12-25 16:16:36,246   12908     INFO result.py(65) - 开始测试： test_login_001 (case.test_login.test)
+2020-12-25 16:16:53,064   12908     INFO result.py(152) - 测试执行通过： test_login_001 (case.test_login.test)
+2020-12-25 16:16:53,064   12908     INFO result.py(86) - 测试结束： test_login_001 (case.test_login.test)
+2020-12-25 16:16:53,064   12908     INFO result.py(88) - 耗时： 16.817252159118652
+2020-12-25 16:16:53,064   12908     INFO result.py(65) - 开始测试： test_login_002 (case.test_login.test)
+2020-12-25 16:17:09,469   12908     INFO result.py(152) - 测试执行通过： test_login_002 (case.test_login.test)
+2020-12-25 16:17:09,469   12908     INFO result.py(86) - 测试结束： test_login_002 (case.test_login.test)
+2020-12-25 16:17:09,469   12908     INFO result.py(88) - 耗时： 16.405571937561035
+2020-12-25 16:17:09,469   12908     INFO result.py(65) - 开始测试： test_login_008 (case.test_login.test)
+2020-12-25 16:17:26,559   12908     INFO result.py(152) - 测试执行通过： test_login_008 (case.test_login.test)
+2020-12-25 16:17:26,559   12908     INFO result.py(86) - 测试结束： test_login_008 (case.test_login.test)
+2020-12-25 16:17:26,559   12908     INFO result.py(88) - 耗时： 17.090142250061035
+2020-12-25 16:17:26,560   12908    ERROR result.py(171) - 测试产生错误： tearDownClass (case.test_login.test)
+Traceback (most recent call last):
+  File "E:\app-python\case\test_login.py", line 27, in tearDownClass
+    cls.driver.quit(cls.driver)
+TypeError: quit() takes 1 positional argument but 2 were given
+
+2020-12-25 16:17:26,560   12908    ERROR result.py(171) - 测试产生错误： tearDownClass (case.test_login.test)
+Traceback (most recent call last):
+  File "E:\app-python\case\test_login.py", line 27, in tearDownClass
+    cls.driver.quit(cls.driver)
+TypeError: quit() takes 1 positional argument but 2 were given
+
+2020-12-25 16:17:26,560    2244     INFO test_runner.py(191) - 
+Pass	test_login_001 (case.test_login.test)
+Pass	test_login_002 (case.test_login.test)
+Pass	test_login_008 (case.test_login.test)
+
+2020-12-25 16:17:26,560    2244    ERROR test_runner.py(193) - 
+Error	tearDownClass (case.test_login.test)
+Error	tearDownClass (case.test_login.test)
+
+2020-12-25 16:17:26,562    2244     INFO test_runner.py(211) - 
+测试结束！
+运行时间: 0:01:25.604376
+共计执行用例数量：3
+执行成功用例数量：3
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：0
+
+2020-12-25 16:26:17,131   15088     INFO test_runner.py(154) - 预计并发线程数：1
+2020-12-25 16:26:48,747   18908     INFO result.py(65) - 开始测试： test_login_001 (case.test_login.test)
+2020-12-25 16:27:06,402   18908     INFO result.py(152) - 测试执行通过： test_login_001 (case.test_login.test)
+2020-12-25 16:27:06,402   18908     INFO result.py(86) - 测试结束： test_login_001 (case.test_login.test)
+2020-12-25 16:27:06,402   18908     INFO result.py(88) - 耗时： 17.65471625328064
+2020-12-25 16:27:06,402   18908     INFO result.py(65) - 开始测试： test_login_002 (case.test_login.test)
+2020-12-25 16:27:23,879   18908     INFO result.py(152) - 测试执行通过： test_login_002 (case.test_login.test)
+2020-12-25 16:27:23,879   18908     INFO result.py(86) - 测试结束： test_login_002 (case.test_login.test)
+2020-12-25 16:27:23,879   18908     INFO result.py(88) - 耗时： 17.477312088012695
+2020-12-25 16:27:23,879   18908     INFO result.py(65) - 开始测试： test_login_008 (case.test_login.test)
+2020-12-25 16:27:42,066   18908     INFO result.py(152) - 测试执行通过： test_login_008 (case.test_login.test)
+2020-12-25 16:27:42,066   18908     INFO result.py(86) - 测试结束： test_login_008 (case.test_login.test)
+2020-12-25 16:27:42,066   18908     INFO result.py(88) - 耗时： 18.187101125717163
+2020-12-25 16:27:47,223   18908    ERROR result.py(171) - 测试产生错误： tearDownClass (case.test_login.test)
+Traceback (most recent call last):
+  File "E:\app-python\case\test_login.py", line 27, in tearDownClass
+    cls.driver.quit()
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 698, in quit
+    self.execute(Command.QUIT)
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 31, in check_response
+    raise wde
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 26, in check_response
+    super().check_response(response)
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: A session is either terminated or not started
+
+
+2020-12-25 16:27:47,223   15088     INFO test_runner.py(191) - 
+Pass	test_login_001 (case.test_login.test)
+Pass	test_login_002 (case.test_login.test)
+Pass	test_login_008 (case.test_login.test)
+
+2020-12-25 16:27:47,223   15088    ERROR test_runner.py(193) - 
+Error	tearDownClass (case.test_login.test)
+
+2020-12-25 16:27:47,225   15088     INFO test_runner.py(211) - 
+测试结束！
+运行时间: 0:01:30.232608
+共计执行用例数量：3
+执行成功用例数量：3
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：0
+
+2020-12-25 16:41:57,059   18448     INFO test_runner.py(154) - 预计并发线程数：1
+2020-12-25 16:42:39,631    9780     INFO result.py(65) - 开始测试： test_login_001 (case.test_login.test)
+2020-12-25 16:42:56,730    9780     INFO result.py(152) - 测试执行通过： test_login_001 (case.test_login.test)
+2020-12-25 16:42:56,730    9780     INFO result.py(86) - 测试结束： test_login_001 (case.test_login.test)
+2020-12-25 16:42:56,730    9780     INFO result.py(88) - 耗时： 17.09973406791687
+2020-12-25 16:42:56,730    9780     INFO result.py(65) - 开始测试： test_login_002 (case.test_login.test)
+2020-12-25 16:43:13,838    9780     INFO result.py(152) - 测试执行通过： test_login_002 (case.test_login.test)
+2020-12-25 16:43:13,839    9780     INFO result.py(86) - 测试结束： test_login_002 (case.test_login.test)
+2020-12-25 16:43:13,839    9780     INFO result.py(88) - 耗时： 17.109023332595825
+2020-12-25 16:43:13,840    9780     INFO result.py(65) - 开始测试： test_login_008 (case.test_login.test)
+2020-12-25 16:43:31,523    9780     INFO result.py(152) - 测试执行通过： test_login_008 (case.test_login.test)
+2020-12-25 16:43:31,523    9780     INFO result.py(86) - 测试结束： test_login_008 (case.test_login.test)
+2020-12-25 16:43:31,523    9780     INFO result.py(88) - 耗时： 17.682910203933716
+2020-12-25 16:44:33,629    9780     INFO result.py(65) - 开始测试： test_nicheng_001 (case.test_nicheng.test)
+2020-12-25 16:44:33,629    9780    ERROR result.py(171) - 测试产生错误： test_nicheng_001 (case.test_nicheng.test)
+Traceback (most recent call last):
+  File "E:\app-python\case\test_nicheng.py", line 36, in test_nicheng_001
+    el = nicheng(self.driver)
+AttributeError: 'test' object has no attribute 'driver'
+
+2020-12-25 16:44:33,629    9780     INFO result.py(86) - 测试结束： test_nicheng_001 (case.test_nicheng.test)
+2020-12-25 16:44:33,629    9780     INFO result.py(88) - 耗时： 0.0
+2020-12-25 16:44:33,630    9780     INFO result.py(65) - 开始测试： test_nicheng_002 (case.test_nicheng.test)
+2020-12-25 16:44:33,630    9780    ERROR result.py(171) - 测试产生错误： test_nicheng_002 (case.test_nicheng.test)
+Traceback (most recent call last):
+  File "E:\app-python\case\test_nicheng.py", line 43, in test_nicheng_002
+    element = self.el.send_keys("我")
+AttributeError: 'test' object has no attribute 'el'
+
+2020-12-25 16:44:33,630    9780     INFO result.py(86) - 测试结束： test_nicheng_002 (case.test_nicheng.test)
+2020-12-25 16:44:33,630    9780     INFO result.py(88) - 耗时： 0.0
+2020-12-25 16:44:33,630    9780     INFO result.py(65) - 开始测试： test_nicheng_003 (case.test_nicheng.test)
+2020-12-25 16:44:33,630    9780    ERROR result.py(171) - 测试产生错误： test_nicheng_003 (case.test_nicheng.test)
+Traceback (most recent call last):
+  File "E:\app-python\case\test_nicheng.py", line 50, in test_nicheng_003
+    el5 = clean_nicheng(self.driver)
+AttributeError: 'test' object has no attribute 'driver'
+
+2020-12-25 16:44:33,630    9780     INFO result.py(86) - 测试结束： test_nicheng_003 (case.test_nicheng.test)
+2020-12-25 16:44:33,630    9780     INFO result.py(88) - 耗时： 0.0
+2020-12-25 16:44:33,631    9780     INFO result.py(65) - 开始测试： test_nicheng_004 (case.test_nicheng.test)
+2020-12-25 16:44:33,631    9780    ERROR result.py(171) - 测试产生错误： test_nicheng_004 (case.test_nicheng.test)
+Traceback (most recent call last):
+  File "E:\app-python\case\test_nicheng.py", line 58, in test_nicheng_004
+    el5 = clean_nicheng(self.driver)
+AttributeError: 'test' object has no attribute 'driver'
+
+2020-12-25 16:44:33,631    9780     INFO result.py(86) - 测试结束： test_nicheng_004 (case.test_nicheng.test)
+2020-12-25 16:44:33,631    9780     INFO result.py(88) - 耗时： 0.0
+2020-12-25 16:44:33,631    9780    ERROR result.py(171) - 测试产生错误： tearDownClass (case.test_nicheng.test)
+Traceback (most recent call last):
+  File "E:\app-python\case\test_nicheng.py", line 66, in tearDownClass
+    cls.driver.quit()
+AttributeError: type object 'test' has no attribute 'driver'
+
+2020-12-25 16:44:33,631   18448     INFO test_runner.py(191) - 
+Pass	test_login_001 (case.test_login.test)
+Pass	test_login_002 (case.test_login.test)
+Pass	test_login_008 (case.test_login.test)
+
+2020-12-25 16:44:33,631   18448    ERROR test_runner.py(193) - 
+Error	test_nicheng_001 (case.test_nicheng.test)
+Error	test_nicheng_002 (case.test_nicheng.test)
+Error	test_nicheng_003 (case.test_nicheng.test)
+Error	test_nicheng_004 (case.test_nicheng.test)
+Error	tearDownClass (case.test_nicheng.test)
+
+2020-12-25 16:44:33,632   18448     INFO test_runner.py(211) - 
+测试结束！
+运行时间: 0:02:36.731101
+共计执行用例数量：7
+执行成功用例数量：3
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：4
+
+2020-12-25 16:48:40,312   20896     INFO test_runner.py(154) - 预计并发线程数：1
+2020-12-25 16:49:31,549   21008     INFO result.py(65) - 开始测试： test_feedback_001 (case.test_Feedback.test)
+2020-12-25 16:49:56,867   21008     INFO result.py(152) - 测试执行通过： test_feedback_001 (case.test_Feedback.test)
+2020-12-25 16:49:56,867   21008     INFO result.py(86) - 测试结束： test_feedback_001 (case.test_Feedback.test)
+2020-12-25 16:49:56,867   21008     INFO result.py(88) - 耗时： 25.317389488220215
+2020-12-25 16:49:56,867   21008     INFO result.py(65) - 开始测试： test_feedback_002 (case.test_Feedback.test)
+2020-12-25 16:50:28,089   21008     INFO result.py(152) - 测试执行通过： test_feedback_002 (case.test_Feedback.test)
+2020-12-25 16:50:28,090   21008     INFO result.py(86) - 测试结束： test_feedback_002 (case.test_Feedback.test)
+2020-12-25 16:50:28,090   21008     INFO result.py(88) - 耗时： 31.22208881378174
+2020-12-25 16:50:28,090   21008     INFO result.py(65) - 开始测试： test_feedback_003 (case.test_Feedback.test)
+2020-12-25 16:51:07,801   21008     INFO result.py(152) - 测试执行通过： test_feedback_003 (case.test_Feedback.test)
+2020-12-25 16:51:07,801   21008     INFO result.py(86) - 测试结束： test_feedback_003 (case.test_Feedback.test)
+2020-12-25 16:51:07,802   21008     INFO result.py(88) - 耗时： 39.711564779281616
+2020-12-25 16:51:51,647   21008     INFO result.py(65) - 开始测试： test_login_001 (case.test_login.test)
+2020-12-25 16:52:08,147   21008     INFO result.py(152) - 测试执行通过： test_login_001 (case.test_login.test)
+2020-12-25 16:52:08,147   21008     INFO result.py(86) - 测试结束： test_login_001 (case.test_login.test)
+2020-12-25 16:52:08,147   21008     INFO result.py(88) - 耗时： 16.499580144882202
+2020-12-25 16:52:08,147   21008     INFO result.py(65) - 开始测试： test_login_002 (case.test_login.test)
+2020-12-25 16:52:24,765   21008     INFO result.py(152) - 测试执行通过： test_login_002 (case.test_login.test)
+2020-12-25 16:52:24,765   21008     INFO result.py(86) - 测试结束： test_login_002 (case.test_login.test)
+2020-12-25 16:52:24,765   21008     INFO result.py(88) - 耗时： 16.617979526519775
+2020-12-25 16:52:24,765   21008     INFO result.py(65) - 开始测试： test_login_008 (case.test_login.test)
+2020-12-25 16:52:41,241   21008  WARNING connectionpool.py(752) - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ProtocolError('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))': /wd/hub/session/a5d76ae6-b5bd-47f2-bd93-99b59be26fa7/screenshot
+2020-12-25 16:52:42,702   21008     INFO result.py(152) - 测试执行通过： test_login_008 (case.test_login.test)
+2020-12-25 16:52:42,703   21008     INFO result.py(86) - 测试结束： test_login_008 (case.test_login.test)
+2020-12-25 16:52:42,703   21008     INFO result.py(88) - 耗时： 17.938145875930786
+2020-12-25 16:53:44,915   21008     INFO result.py(65) - 开始测试： test_nicheng_001 (case.test_nicheng.test)
+2020-12-25 16:53:44,915   21008    ERROR result.py(171) - 测试产生错误： test_nicheng_001 (case.test_nicheng.test)
+Traceback (most recent call last):
+  File "E:\app-python\case\test_nicheng.py", line 36, in test_nicheng_001
+    el = nicheng(self.driver)
+AttributeError: 'test' object has no attribute 'driver'
+
+2020-12-25 16:53:44,915   21008     INFO result.py(86) - 测试结束： test_nicheng_001 (case.test_nicheng.test)
+2020-12-25 16:53:44,915   21008     INFO result.py(88) - 耗时： 0.0
+2020-12-25 16:53:44,916   21008     INFO result.py(65) - 开始测试： test_nicheng_002 (case.test_nicheng.test)
+2020-12-25 16:53:44,916   21008    ERROR result.py(171) - 测试产生错误： test_nicheng_002 (case.test_nicheng.test)
+Traceback (most recent call last):
+  File "E:\app-python\case\test_nicheng.py", line 43, in test_nicheng_002
+    element = self.el.send_keys("我")
+AttributeError: 'test' object has no attribute 'el'
+
+2020-12-25 16:53:44,916   21008     INFO result.py(86) - 测试结束： test_nicheng_002 (case.test_nicheng.test)
+2020-12-25 16:53:44,916   21008     INFO result.py(88) - 耗时： 0.0
+2020-12-25 16:53:44,916   21008     INFO result.py(65) - 开始测试： test_nicheng_003 (case.test_nicheng.test)
+2020-12-25 16:53:44,916   21008    ERROR result.py(171) - 测试产生错误： test_nicheng_003 (case.test_nicheng.test)
+Traceback (most recent call last):
+  File "E:\app-python\case\test_nicheng.py", line 50, in test_nicheng_003
+    clean2 = clean_nicheng(self.driver)
+AttributeError: 'test' object has no attribute 'driver'
+
+2020-12-25 16:53:44,916   21008     INFO result.py(86) - 测试结束： test_nicheng_003 (case.test_nicheng.test)
+2020-12-25 16:53:44,917   21008     INFO result.py(88) - 耗时： 0.0
+2020-12-25 16:53:44,917   21008     INFO result.py(65) - 开始测试： test_nicheng_004 (case.test_nicheng.test)
+2020-12-25 16:53:44,917   21008    ERROR result.py(171) - 测试产生错误： test_nicheng_004 (case.test_nicheng.test)
+Traceback (most recent call last):
+  File "E:\app-python\case\test_nicheng.py", line 58, in test_nicheng_004
+    clean1 = clean_nicheng(self.driver)
+AttributeError: 'test' object has no attribute 'driver'
+
+2020-12-25 16:53:44,917   21008     INFO result.py(86) - 测试结束： test_nicheng_004 (case.test_nicheng.test)
+2020-12-25 16:53:44,917   21008     INFO result.py(88) - 耗时： 0.0
+2020-12-25 16:53:44,917   20896     INFO test_runner.py(191) - 
+Pass	test_feedback_001 (case.test_Feedback.test)
+Pass	test_feedback_002 (case.test_Feedback.test)
+Pass	test_feedback_003 (case.test_Feedback.test)
+Pass	test_login_001 (case.test_login.test)
+Pass	test_login_002 (case.test_login.test)
+Pass	test_login_008 (case.test_login.test)
+
+2020-12-25 16:53:44,918   20896    ERROR test_runner.py(193) - 
+Error	test_nicheng_001 (case.test_nicheng.test)
+Error	test_nicheng_002 (case.test_nicheng.test)
+Error	test_nicheng_003 (case.test_nicheng.test)
+Error	test_nicheng_004 (case.test_nicheng.test)
+
+2020-12-25 16:53:44,919   20896     INFO test_runner.py(211) - 
+测试结束！
+运行时间: 0:05:04.744922
+共计执行用例数量：10
+执行成功用例数量：6
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：4
+
+2020-12-25 17:13:29,041   18920     INFO test_runner.py(154) - 预计并发线程数：1
+2020-12-25 17:14:18,202   17948    ERROR result.py(171) - 测试产生错误： setUpClass (case.test_Feedback.test)
+Traceback (most recent call last):
+  File "E:\app-python\venv\lib\site-packages\urllib3\connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "E:\app-python\venv\lib\site-packages\urllib3\connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "D:\Python37\lib\http\client.py", line 1229, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "D:\Python37\lib\http\client.py", line 1275, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "D:\Python37\lib\http\client.py", line 1224, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "D:\Python37\lib\http\client.py", line 1055, in _send_output
+    self.send(chunk)
+  File "D:\Python37\lib\http\client.py", line 977, in send
+    self.sock.sendall(data)
+ConnectionAbortedError: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\app-python\case\test_Feedback.py", line 17, in setUpClass
+    el = driver.find_element_by_accessibility_id("服务中心").click()
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\extensions\search_context\mobile.py", line 47, in find_element_by_accessibility_id
+    return self.find_element(by=MobileBy.ACCESSIBILITY_ID, value=accessibility_id)
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\webdriver.py", line 281, in find_element
+    'value': value})['value']
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 374, in execute
+    return self._request(command_info[0], url, body=data)
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "E:\app-python\venv\lib\site-packages\urllib3\request.py", line 80, in request
+    method, url, fields=fields, headers=headers, **urlopen_kw
+  File "E:\app-python\venv\lib\site-packages\urllib3\request.py", line 171, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "E:\app-python\venv\lib\site-packages\urllib3\poolmanager.py", line 336, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "E:\app-python\venv\lib\site-packages\urllib3\connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "E:\app-python\venv\lib\site-packages\urllib3\util\retry.py", line 410, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "E:\app-python\venv\lib\site-packages\urllib3\packages\six.py", line 734, in reraise
+    raise value.with_traceback(tb)
+  File "E:\app-python\venv\lib\site-packages\urllib3\connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "E:\app-python\venv\lib\site-packages\urllib3\connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "D:\Python37\lib\http\client.py", line 1229, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "D:\Python37\lib\http\client.py", line 1275, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "D:\Python37\lib\http\client.py", line 1224, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "D:\Python37\lib\http\client.py", line 1055, in _send_output
+    self.send(chunk)
+  File "D:\Python37\lib\http\client.py", line 977, in send
+    self.sock.sendall(data)
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionAbortedError(10053, '你的主机中的软件中止了一个已建立的连接。', None, 10053, None))
+
+2020-12-25 17:15:01,793   17948    ERROR result.py(171) - 测试产生错误： setUpClass (case.test_login.test)
+Traceback (most recent call last):
+  File "E:\app-python\case\test_login.py", line 22, in setUpClass
+    driver = mainpage(driver)
+  File "E:\app-python\base\activity.py", line 33, in mainpage
+    element = driver.find_element_by_accessibility_id("立即体验").click()
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\extensions\search_context\mobile.py", line 47, in find_element_by_accessibility_id
+    return self.find_element(by=MobileBy.ACCESSIBILITY_ID, value=accessibility_id)
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\webdriver.py", line 281, in find_element
+    'value': value})['value']
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 31, in check_response
+    raise wde
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\errorhandler.py", line 26, in check_response
+    super().check_response(response)
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: An element could not be located on the page using the given search parameters.
+
+
+2020-12-25 17:15:12,504   17948    ERROR result.py(171) - 测试产生错误： setUpClass (case.test_nicheng.test)
+Traceback (most recent call last):
+  File "E:\app-python\case\test_nicheng.py", line 13, in setUpClass
+    driver = desired_caps()
+  File "E:\app-python\base\activity.py", line 21, in desired_caps
+    driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', d_caps)
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\webdriver.py", line 155, in __init__
+    proxy
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 157, in __init__
+    self.start_session(capabilities, browser_profile)
+  File "E:\app-python\venv\lib\site-packages\appium\webdriver\webdriver.py", line 225, in start_session
+    response = self.execute(RemoteCommand.NEW_SESSION, parameters)
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "E:\app-python\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Error getting device platform version. Original error: Error executing adbExec. Original error: 'Command 'D\:\\android-sdk_r24.4.1-windows\\android-sdk-windows\\platform-tools\\adb.exe -P 5037 -s 127.0.0.1\:62025 shell getprop ro.build.version.release' exited with code 1'; Stderr: 'error: device offline'; Code: '1'
+
+
+2020-12-25 17:15:12,505   18920    ERROR test_runner.py(193) - 
+Error	setUpClass (case.test_Feedback.test)
+Error	setUpClass (case.test_login.test)
+Error	setUpClass (case.test_nicheng.test)
+
+2020-12-25 17:15:12,507   18920     INFO test_runner.py(211) - 
+测试结束！
+运行时间: 0:01:43.609202
+共计执行用例数量：0
+执行成功用例数量：0
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：0
+
+2020-12-25 17:22:44,238   13348     INFO test_runner.py(154) - 预计并发线程数：1
+2020-12-25 17:23:37,668   19008     INFO result.py(65) - 开始测试： test_feedback_001 (case.test_Feedback.test)
+2020-12-25 17:24:03,908   19008     INFO result.py(152) - 测试执行通过： test_feedback_001 (case.test_Feedback.test)
+2020-12-25 17:24:03,909   19008     INFO result.py(86) - 测试结束： test_feedback_001 (case.test_Feedback.test)
+2020-12-25 17:24:03,909   19008     INFO result.py(88) - 耗时： 26.241169214248657
+2020-12-25 17:24:03,909   19008     INFO result.py(65) - 开始测试： test_feedback_002 (case.test_Feedback.test)
+2020-12-25 17:24:28,600   19008     INFO result.py(152) - 测试执行通过： test_feedback_002 (case.test_Feedback.test)
+2020-12-25 17:24:28,600   19008     INFO result.py(86) - 测试结束： test_feedback_002 (case.test_Feedback.test)
+2020-12-25 17:24:28,600   19008     INFO result.py(88) - 耗时： 24.69147253036499
+2020-12-25 17:24:28,600   19008     INFO result.py(65) - 开始测试： test_feedback_003 (case.test_Feedback.test)
+2020-12-25 17:25:03,796   19008     INFO result.py(152) - 测试执行通过： test_feedback_003 (case.test_Feedback.test)
+2020-12-25 17:25:03,796   19008     INFO result.py(86) - 测试结束： test_feedback_003 (case.test_Feedback.test)
+2020-12-25 17:25:03,797   19008     INFO result.py(88) - 耗时： 35.19563865661621
+2020-12-25 17:25:45,966   19008     INFO result.py(65) - 开始测试： test_login_001 (case.test_login.test)
+2020-12-25 17:26:02,542   19008     INFO result.py(152) - 测试执行通过： test_login_001 (case.test_login.test)
+2020-12-25 17:26:02,542   19008     INFO result.py(86) - 测试结束： test_login_001 (case.test_login.test)
+2020-12-25 17:26:02,542   19008     INFO result.py(88) - 耗时： 16.575697660446167
+2020-12-25 17:26:02,542   19008     INFO result.py(65) - 开始测试： test_login_002 (case.test_login.test)
+2020-12-25 17:26:19,685   19008     INFO result.py(152) - 测试执行通过： test_login_002 (case.test_login.test)
+2020-12-25 17:26:19,685   19008     INFO result.py(86) - 测试结束： test_login_002 (case.test_login.test)
+2020-12-25 17:26:19,685   19008     INFO result.py(88) - 耗时： 17.142895460128784
+2020-12-25 17:26:19,685   19008     INFO result.py(65) - 开始测试： test_login_008 (case.test_login.test)
+2020-12-25 17:26:36,798   19008     INFO result.py(152) - 测试执行通过： test_login_008 (case.test_login.test)
+2020-12-25 17:26:36,798   19008     INFO result.py(86) - 测试结束： test_login_008 (case.test_login.test)
+2020-12-25 17:26:36,798   19008     INFO result.py(88) - 耗时： 17.11361002922058
+2020-12-25 17:27:40,186   19008     INFO result.py(65) - 开始测试： test_nicheng_001 (case.test_nicheng.test)
+2020-12-25 17:27:49,140   19008     INFO result.py(152) - 测试执行通过： test_nicheng_001 (case.test_nicheng.test)
+2020-12-25 17:27:49,140   19008     INFO result.py(86) - 测试结束： test_nicheng_001 (case.test_nicheng.test)
+2020-12-25 17:27:49,140   19008     INFO result.py(88) - 耗时： 8.954426050186157
+2020-12-25 17:27:49,140   19008     INFO result.py(65) - 开始测试： test_nicheng_002 (case.test_nicheng.test)
+2020-12-25 17:27:56,531   19008     INFO result.py(152) - 测试执行通过： test_nicheng_002 (case.test_nicheng.test)
+2020-12-25 17:27:56,531   19008     INFO result.py(86) - 测试结束： test_nicheng_002 (case.test_nicheng.test)
+2020-12-25 17:27:56,531   19008     INFO result.py(88) - 耗时： 7.390607595443726
+2020-12-25 17:27:56,531   19008     INFO result.py(65) - 开始测试： test_nicheng_003 (case.test_nicheng.test)
+2020-12-25 17:28:07,415   19008     INFO result.py(152) - 测试执行通过： test_nicheng_003 (case.test_nicheng.test)
+2020-12-25 17:28:07,415   19008     INFO result.py(86) - 测试结束： test_nicheng_003 (case.test_nicheng.test)
+2020-12-25 17:28:07,415   19008     INFO result.py(88) - 耗时： 10.883792638778687
+2020-12-25 17:28:07,415   19008     INFO result.py(65) - 开始测试： test_nicheng_004 (case.test_nicheng.test)
+2020-12-25 17:28:15,735   19008     INFO result.py(152) - 测试执行通过： test_nicheng_004 (case.test_nicheng.test)
+2020-12-25 17:28:15,735   19008     INFO result.py(86) - 测试结束： test_nicheng_004 (case.test_nicheng.test)
+2020-12-25 17:28:15,735   19008     INFO result.py(88) - 耗时： 8.319248676300049
+2020-12-25 17:28:15,736   13348     INFO test_runner.py(191) - 
+Pass	test_feedback_001 (case.test_Feedback.test)
+Pass	test_feedback_002 (case.test_Feedback.test)
+Pass	test_feedback_003 (case.test_Feedback.test)
+Pass	test_login_001 (case.test_login.test)
+Pass	test_login_002 (case.test_login.test)
+Pass	test_login_008 (case.test_login.test)
+Pass	test_nicheng_001 (case.test_nicheng.test)
+Pass	test_nicheng_002 (case.test_nicheng.test)
+Pass	test_nicheng_003 (case.test_nicheng.test)
+Pass	test_nicheng_004 (case.test_nicheng.test)
+
+2020-12-25 17:28:15,737   13348     INFO test_runner.py(211) - 
+测试结束！
+运行时间: 0:05:31.635767
+共计执行用例数量：10
+执行成功用例数量：10
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：0
+

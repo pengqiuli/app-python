@@ -5,6 +5,7 @@ from appium import webdriver
 from base.activity import *
 from time import sleep
 import unittest
+
 # 启动app
 class test(unittest.TestCase):
     driver = None

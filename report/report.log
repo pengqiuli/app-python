@@ -1274,3 +1274,105 @@ Pass	test_nicheng_004 (case.test_nicheng.test)
 跳过执行用例数量：0
 产生异常用例数量：0
 
+2021-01-04 17:36:13,960   13448     INFO test_runner.py(154) - 预计并发线程数：1
+2021-01-04 17:36:13,965    2292     INFO result.py(65) - 开始测试： case.test_Feedback (unittest.loader._FailedTest)
+2021-01-04 17:36:13,965    2292    ERROR result.py(171) - 测试产生错误： case.test_Feedback (unittest.loader._FailedTest)
+ImportError: Failed to import test module: case.test_Feedback
+Traceback (most recent call last):
+  File "D:\Python37\lib\unittest\loader.py", line 434, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "D:\Python37\lib\unittest\loader.py", line 375, in _get_module_from_name
+    __import__(name)
+  File "E:\app-python\case\test_Feedback.py", line 5, in <module>
+    from base.activity import *
+  File "E:\app-python\base\activity.py", line 4, in <module>
+    from PIL import ImageEnhance
+  File "D:\Python37\lib\site-packages\PIL\ImageEnhance.py", line 21, in <module>
+    from . import Image, ImageFilter, ImageStat
+  File "D:\Python37\lib\site-packages\PIL\ImageFilter.py", line 20, in <module>
+    import numpy
+  File "D:\Python37\lib\site-packages\numpy\__init__.py", line 305, in <module>
+    _win_os_check()
+  File "D:\Python37\lib\site-packages\numpy\__init__.py", line 302, in _win_os_check
+    raise RuntimeError(msg.format(__file__)) from None
+RuntimeError: The current Numpy installation ('D:\\Python37\\lib\\site-packages\\numpy\\__init__.py') fails to pass a sanity check due to a bug in the windows runtime. See this issue for more information: https://tinyurl.com/y3dm3h86
+
+
+2021-01-04 17:36:13,965    2292     INFO result.py(86) - 测试结束： case.test_Feedback (unittest.loader._FailedTest)
+2021-01-04 17:36:13,965    2292     INFO result.py(88) - 耗时： 0.0
+2021-01-04 17:36:13,968   13448    ERROR test_runner.py(193) - 
+Error	case.test_Feedback (unittest.loader._FailedTest)
+
+2021-01-04 17:36:13,969   13448     INFO test_runner.py(211) - 
+测试结束！
+运行时间: 0:00:00.188409
+共计执行用例数量：1
+执行成功用例数量：0
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：1
+
+2021-01-04 17:37:37,161   16800     INFO test_runner.py(154) - 预计并发线程数：1
+2021-01-04 17:37:37,163    2164     INFO result.py(65) - 开始测试： case.test_Feedback (unittest.loader._FailedTest)
+2021-01-04 17:37:37,164    2164    ERROR result.py(171) - 测试产生错误： case.test_Feedback (unittest.loader._FailedTest)
+ImportError: Failed to import test module: case.test_Feedback
+Traceback (most recent call last):
+  File "D:\Python37\lib\unittest\loader.py", line 434, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "D:\Python37\lib\unittest\loader.py", line 375, in _get_module_from_name
+    __import__(name)
+  File "E:\app-python\case\test_Feedback.py", line 5, in <module>
+    from base.activity import *
+  File "E:\app-python\base\activity.py", line 4, in <module>
+    from PIL import ImageEnhance
+  File "D:\Python37\lib\site-packages\PIL\ImageEnhance.py", line 21, in <module>
+    from . import Image, ImageFilter, ImageStat
+  File "D:\Python37\lib\site-packages\PIL\ImageFilter.py", line 20, in <module>
+    import numpy
+  File "D:\Python37\lib\site-packages\numpy\__init__.py", line 305, in <module>
+    _win_os_check()
+  File "D:\Python37\lib\site-packages\numpy\__init__.py", line 302, in _win_os_check
+    raise RuntimeError(msg.format(__file__)) from None
+RuntimeError: The current Numpy installation ('D:\\Python37\\lib\\site-packages\\numpy\\__init__.py') fails to pass a sanity check due to a bug in the windows runtime. See this issue for more information: https://tinyurl.com/y3dm3h86
+
+
+2021-01-04 17:37:37,164    2164     INFO result.py(86) - 测试结束： case.test_Feedback (unittest.loader._FailedTest)
+2021-01-04 17:37:37,164    2164     INFO result.py(88) - 耗时： 0.0
+2021-01-04 17:37:37,165    2164     INFO result.py(65) - 开始测试： case.test_login (unittest.loader._FailedTest)
+2021-01-04 17:37:37,165    2164    ERROR result.py(171) - 测试产生错误： case.test_login (unittest.loader._FailedTest)
+ImportError: Failed to import test module: case.test_login
+Traceback (most recent call last):
+  File "D:\Python37\lib\unittest\loader.py", line 434, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "D:\Python37\lib\unittest\loader.py", line 375, in _get_module_from_name
+    __import__(name)
+  File "E:\app-python\case\test_login.py", line 5, in <module>
+    from base.activity import *
+  File "E:\app-python\base\activity.py", line 4, in <module>
+    from PIL import ImageEnhance
+  File "D:\Python37\lib\site-packages\PIL\ImageEnhance.py", line 21, in <module>
+    from . import Image, ImageFilter, ImageStat
+  File "D:\Python37\lib\site-packages\PIL\ImageFilter.py", line 20, in <module>
+    import numpy
+  File "D:\Python37\lib\site-packages\numpy\__init__.py", line 305, in <module>
+    _win_os_check()
+  File "D:\Python37\lib\site-packages\numpy\__init__.py", line 302, in _win_os_check
+    raise RuntimeError(msg.format(__file__)) from None
+RuntimeError: The current Numpy installation ('D:\\Python37\\lib\\site-packages\\numpy\\__init__.py') fails to pass a sanity check due to a bug in the windows runtime. See this issue for more information: https://tinyurl.com/y3dm3h86
+
+
+2021-01-04 17:37:37,165    2164     INFO result.py(86) - 测试结束： case.test_login (unittest.loader._FailedTest)
+2021-01-04 17:37:37,165    2164     INFO result.py(88) - 耗时： 0.0
+2021-01-04 17:37:37,166   16800    ERROR test_runner.py(193) - 
+Error	case.test_Feedback (unittest.loader._FailedTest)
+Error	case.test_login (unittest.loader._FailedTest)
+
+2021-01-04 17:37:37,167   16800     INFO test_runner.py(211) - 
+测试结束！
+运行时间: 0:00:00.134689
+共计执行用例数量：2
+执行成功用例数量：0
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：2
+

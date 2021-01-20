@@ -24,6 +24,9 @@ class test(unittest.TestCase):
         el = driver.find_element_by_accessibility_id("任务").click()
         TouchAction(driver).tap(x = 300,y = 310).perform()
 
+    def tearDownClass(cls) -> None:
+        pass
+
 
 
 
